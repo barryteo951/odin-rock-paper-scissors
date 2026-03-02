@@ -12,6 +12,23 @@ console.log("Hello World")
 // Note: Arrays are not necessary for this problem
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
 
+getComputerChoice();
+
+function getComputerChoice() {
+    let randomNumber = Math.floor(Math.random() * 3);  
+    let computerChoice;
+
+    if (randomNumber == 0) 
+        computerChoice = "rock"; 
+    else if (randomNumber == 1) 
+        computerChoice = "paper";
+    else 
+        computerChoice = "scissors";
+
+    console.log(randomNumber);
+    console.log(computerChoice);
+}
+
 
 
 // 3. get the human choice 
