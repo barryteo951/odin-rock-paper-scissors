@@ -1,5 +1,6 @@
 // 1. set-up the project structure
-// check if js is linked correctly 
+// check if js is linked correctly
+ 
 console.log("Hello World")
 
 
@@ -40,6 +41,12 @@ function getComputerChoice() {
 // 3. get the human choice 
 // write a function that takes the user choice and returns it.
 
+// Create a function named getHumanChoice.
+// getHumanChoice should return one of the valid choices depending on what the user inputs.
+// Hint: Use the prompt method to get the user’s input.
+// You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
+// Test what your function returns by using console.log.
+
 getHumanChoice();
 
 function getHumanChoice() {
@@ -62,15 +69,6 @@ function getHumanChoice() {
 
     console.log(humanChoice);
 }
-
-
-
-
-// Create a function named getHumanChoice.
-// getHumanChoice should return one of the valid choices depending on what the user inputs.
-// Hint: Use the prompt method to get the user’s input.
-// You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
-// Test what your function returns by using console.log.
 
 
 
