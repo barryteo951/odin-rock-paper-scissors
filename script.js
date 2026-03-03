@@ -18,29 +18,16 @@ function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);  
     let computerChoice;
 
-    switch (randomNumber) {
-        case 0: 
-            computerChoice = "rock";
-            break;
-        case 1: 
-            computerChoice = "paper";
-            break;
-        case 2: 
-            computerChoice = "scissors";
-            break;
-    }
-
-    // if (randomNumber == 0) 
-    //     computerChoice = "rock"; 
-    // else if (randomNumber == 1) 
-    //     computerChoice = "paper";
-    // else 
-    //     computerChoice = "scissors";
+    if (randomNumber == 0) 
+        computerChoice = "rock"; 
+    else if (randomNumber == 1) 
+        computerChoice = "paper";
+    else 
+        computerChoice = "scissors";
 
     console.log(randomNumber);
     console.log(computerChoice);
 }
-
 
 
 
@@ -52,40 +39,6 @@ function getComputerChoice() {
 // Hint: Use the prompt method to get the user’s input.
 // You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
 // Test what your function returns by using console.log.
-
-getHumanChoice();
-
-function getHumanChoice() {
-    let humanChoice = prompt("Choose rock, paper, or scissors");
-
-    switch (humanChoice) {
-        case "rock": 
-            humanChoice = "rock";
-            break;
-        case "paper":
-            humanChoice = "paper";
-            break;
-        case "scissors":
-            humanChoice = "scissors";
-            break;
-        default: 
-            alert("Invalid prompt");
-            break;
-    }
-    
-    // if (humanChoice == "rock")
-    //     return humanChoice;
-    // else if (humanChoice == "paper") 
-    //     return humanChoice;
-    // else if (humanChoice == "scissors")
-    //     return humanChoice; 
-    // else 
-    //     return "Invalid input"
-
-    console.log(humanChoice);
-    // alert("where my message");
-}
-
 
 
 
