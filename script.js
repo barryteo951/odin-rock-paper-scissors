@@ -19,13 +19,18 @@ function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);  
     let computerChoice;
 
-    if (randomNumber == 0) 
-        computerChoice = "rock"; 
-    else if (randomNumber == 1) 
-        computerChoice = "paper";
-    else 
-        computerChoice = "scissors";
-
+    switch (randomNumber) {
+        case 0: 
+            computerChoice = "rock";
+            break;
+        case 1: 
+            computerChoice = "paper";
+            break;
+        case 2: 
+            computerChoice = "scissors";
+            break;
+    }
+    
     console.log(randomNumber);
     console.log(computerChoice);
 }
