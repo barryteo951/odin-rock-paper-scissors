@@ -3,6 +3,7 @@
 console.log("Hello World")
 
 
+
 // 2. get the computer choice
 // write a function that randomly returns “rock”, “paper” or “scissors”.
 
@@ -33,6 +34,32 @@ function getComputerChoice() {
 
 // 3. get the human choice 
 // write a function that takes the user choice and returns it.
+
+getHumanChoice();
+
+function getHumanChoice() {
+    let humanChoice = prompt("Choose rock, paper, or scissors");
+
+    switch (humanChoice) {
+        case "rock": 
+            humanChoice = "rock";
+            break;
+        case "paper":
+            humanChoice = "paper";
+            break;
+        case "scissors":
+            humanChoice = "scissors";
+            break;
+        default: 
+            alert("Invalid prompt");
+            break;
+    }
+
+    console.log(humanChoice);
+}
+
+
+
 
 // Create a function named getHumanChoice.
 // getHumanChoice should return one of the valid choices depending on what the user inputs.
