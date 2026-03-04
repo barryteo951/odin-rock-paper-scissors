@@ -130,7 +130,7 @@ function playGame() {
     let humanScore = 0; 
     let computerScore = 0; 
 
-    for (let i=0; i<5; i++) {
+    while(humanScore<5 && computerScore<5) {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
