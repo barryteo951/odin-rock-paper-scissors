@@ -14,7 +14,7 @@ console.log("Hello World")
 // Note: Arrays are not necessary for this problem
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
 
-getComputerChoice();
+// getComputerChoice();
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);  
@@ -32,8 +32,9 @@ function getComputerChoice() {
             break;
     }
     
-    console.log(randomNumber);
-    console.log(computerChoice);
+    console.log("The random number in getter method : " + randomNumber);
+    console.log("The computer choice in getter method : " + computerChoice);
+    return computerChoice;
 }
 
 
@@ -47,10 +48,10 @@ function getComputerChoice() {
 // You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
 // Test what your function returns by using console.log.
 
-getHumanChoice();
+// getHumanChoice();
 
 function getHumanChoice() {
-    let humanChoice = prompt("Choose rock, paper, or scissors");
+    let humanChoice = prompt("Choose rock, paper, or scissors").toLowerCase();
 
     switch (humanChoice) {
         case "rock": 
@@ -67,7 +68,8 @@ function getHumanChoice() {
             break;
     }
 
-    console.log(humanChoice);
+    console.log("The human choice in getter method : " + humanChoice);
+    return humanChoice;
 }
 
 
@@ -77,6 +79,9 @@ function getHumanChoice() {
 
 // Create two new variables named humanScore and computerScore in the global scope.
 // Initialize those variables with the value of 0.
+
+let humanScore = 0; 
+let computerScore = 0; 
 
 
 
@@ -88,6 +93,22 @@ function getHumanChoice() {
 // Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
 // Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
 // Increment the humanScore or computerScore variable based on the round winner.
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+playRound(humanChoice, computerChoice);
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == computerChoice) {
+        console.log("Draw!");
+    } else if ((humanChoice=="rock" && computerChoice=="scissors") || (humanChoice=="scissors" && computerChoice=="paper") || (humanChoice=="paper" && computerChoice=="rock")) {           
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+    }
+}
 
 
 
