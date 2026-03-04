@@ -1,7 +1,7 @@
 // 1. set-up the project structure
 // check if js is linked correctly
  
-console.log("Hello World")
+// console.log("Hello World")
 
 
 
@@ -32,8 +32,8 @@ function getComputerChoice() {
             break;
     }
     
-    console.log("The random number in getter method : " + randomNumber);
-    console.log("The computer choice in getter method : " + computerChoice);
+    // console.log("The random number in getter method : " + randomNumber);
+    // console.log("The computer choice in getter method : " + computerChoice);
     return computerChoice;
 }
 
@@ -68,7 +68,7 @@ function getHumanChoice() {
             break;
     }
 
-    console.log("The human choice in getter method : " + humanChoice);
+    // console.log("The human choice in getter method : " + humanChoice);
     return humanChoice;
 }
 
@@ -80,8 +80,9 @@ function getHumanChoice() {
 // Create two new variables named humanScore and computerScore in the global scope.
 // Initialize those variables with the value of 0.
 
-let humanScore = 0; 
-let computerScore = 0; 
+// move into playgame function
+// let humanScore = 0; 
+// let computerScore = 0; 
 
 
 
@@ -94,21 +95,22 @@ let computerScore = 0;
 // Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
 // Increment the humanScore or computerScore variable based on the round winner.
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
-playRound(humanChoice, computerChoice);
+// move into playgame function
+// let humanChoice = getHumanChoice();
+// let computerChoice = getComputerChoice();
+// playRound(humanChoice, computerChoice);
 
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == computerChoice) {
-        console.log("Draw!");
-    } else if ((humanChoice=="rock" && computerChoice=="scissors") || (humanChoice=="scissors" && computerChoice=="paper") || (humanChoice=="paper" && computerChoice=="rock")) {           
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-        humanScore++;
-    } else {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-        computerScore++;
-    }
-}
+// function playRound(humanChoice, computerChoice) {
+//     if (humanChoice == computerChoice) {
+//         console.log("Draw!");
+//     } else if ((humanChoice=="rock" && computerChoice=="scissors") || (humanChoice=="scissors" && computerChoice=="paper") || (humanChoice=="paper" && computerChoice=="rock")) {           
+//         console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+//         humanScore++;
+//     } else {
+//         console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+//         computerScore++;
+//     }
+// }
 
 
 
@@ -122,3 +124,28 @@ function playRound(humanChoice, computerChoice) {
 // Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
 // If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
 
+playGame();
+
+function playGame() {
+    let humanScore = 0; 
+    let computerScore = 0; 
+
+    for (let i=0; i<5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice);
+    }
+
+    function playRound(humanChoice, computerChoice) {
+        if (humanChoice == computerChoice) {
+            console.log("Draw!");
+        } else if ((humanChoice=="rock" && computerChoice=="scissors") || (humanChoice=="scissors" && computerChoice=="paper") || (humanChoice=="paper" && computerChoice=="rock")) {           
+            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            humanScore++;
+        } else {
+            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+            computerScore++;
+        }
+        console.log("You: " + humanScore + "   Bot: " + computerScore);
+    }
+}
