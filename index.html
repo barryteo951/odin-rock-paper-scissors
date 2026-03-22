@@ -5,11 +5,91 @@
 
     <head>
         <title>Rock, Paper, Scissors</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            .labels {
+                font-size: 60px;
+            }
+
+            .scores {
+                display: flex;
+                font-size: 60px;
+            }
+
+            .scores .human {
+                margin-right: 90px;                
+            }
+
+            /* .images {
+                margin-top: 60px;
+                display: flex;
+            } */
+
+            .buttons {
+                margin-top: 125px;
+                display: flex;
+                gap: 50px;
+                margin-bottom: 125px;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                width: 200px;
+                padding: 100px 100px;
+                border-radius: 50px;
+            }
+
+            .message {
+                font-size: 60px;
+            }
+        </style>
     </head>
 
 
 
     <body>
+        <div class="labels">
+            <label>YOU</label>
+            <label>:</label>
+            <label>BOT</label>
+        </div>
+
+        <div class="scores">
+            <div class="human">0</div>
+            <div class="computer">0</div>
+        </div>
+
+        <!-- <div class="images">
+            <img class="rock" src="./images/rock.png" width="500px"></img>
+            <img class="paper" src="./images/paper.png"width="500px"></img>
+            <img class="scissors" src="./images/scissors.png" width="500px"></img>
+        </div> -->
+
+        <div class="buttons">
+            <button class="rock">
+                <img src="./images/rock.png" width="500px"></img>
+            </button>
+            <button class="paper">
+                <img src="./images/paper.png" width="500px"></img>
+            </button>
+            <button class="scissors">
+                <img src="./images/scissors.png" width="500px"></img>
+            </button>
+        </div>
+
+        <div class="message">Make your move!</div>
+        
+
+
         <script src="script.js"></script>
     </body>
 
