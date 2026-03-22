@@ -15,9 +15,10 @@
 
 
 
-const buttonRock = document.querySelector(".buttons .rock");
-const buttonPaper = document.querySelector(".buttons .paper");
-const buttonScissors = document.querySelector(".buttons .scissors");
+const buttons = document.querySelectorAll("button");
+// const buttonRock = document.querySelector(".buttons .rock");
+// const buttonPaper = document.querySelector(".buttons .paper");
+// const buttonScissors = document.querySelector(".buttons .scissors");
 const divMessage = document.querySelector(".message")
 const divHumanScore = document.querySelector(".scores .human");
 const divComputerScore = document.querySelector(".scores .computer"); 
@@ -80,21 +81,24 @@ function playGame() {
     // let humanChoice = ""getHumanChoice""();
     let humanChoice = "";
     let computerChoice = "";
-    buttonRock.addEventListener("click", (event) => {
-        humanChoice = buttonRock.className;
-        console.log("human choice: " + humanChoice);
-        playRound(humanChoice);
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+           humanChoice = button.className;
+           playRound(humanChoice);
+        });
     }); 
-    buttonPaper.addEventListener("click", (event) => {
-        humanChoice = buttonPaper.className;
-        console.log("human choice: " + humanChoice);
-        playRound(humanChoice);
-    });
-    buttonScissors.addEventListener("click", (event) => {
-        humanChoice = buttonScissors.className;
-        console.log("human choice: " + humanChoice);
-        playRound(humanChoice);
-    });
+    // buttonRock.addEventListener("click", (event) => {
+    //     humanChoice = buttonRock.className;
+    //     playRound(humanChoice);
+    // }); 
+    // buttonPaper.addEventListener("click", (event) => {
+    //     humanChoice = buttonPaper.className;
+    //     playRound(humanChoice);
+    // });
+    // buttonScissors.addEventListener("click", (event) => {
+    //     humanChoice = buttonScissors.className;
+    //     playRound(humanChoice);
+    // });
     // }
 
     
