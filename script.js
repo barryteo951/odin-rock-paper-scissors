@@ -79,14 +79,14 @@ function playGame() {
 
     // while (humanScore < 5 && computerScore < 5) {
     // let humanChoice = ""getHumanChoice""();
-    let humanChoice = "";
-    let computerChoice = "";
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-           humanChoice = button.className;
-           playRound(humanChoice);
-        });
-    }); 
+        let humanChoice = "";
+        let computerChoice = "";
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+            humanChoice = button.className;
+            playRound(humanChoice);
+            });
+        }); 
     // buttonRock.addEventListener("click", (event) => {
     //     humanChoice = buttonRock.className;
     //     playRound(humanChoice);
