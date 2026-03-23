@@ -48,6 +48,7 @@ function playGame() {
         button.addEventListener("click", () => {
             humanChoice = button.className;
             playRound(humanChoice);
+            checkWinner(humanScore, computerScore);
         });
     }); 
     
@@ -69,7 +70,6 @@ function playGame() {
         divHumanScore.textContent = humanScore;
         divComputerScore.textContent = computerScore;
 
-        checkWinner(humanScore, computerScore);
     }
 }
 
@@ -77,10 +77,16 @@ function playGame() {
 function checkWinner(humanScore, computerScore) {
     if (humanScore >= 5) { 
         divMessage.textContent = "YOU WIN, CONGRATS!";
+        buttons.forEach((button) => {
+            button.disabled = true;
+        });
         return;
     }
     else if (computerScore >= 5) {
         divMessage.textContent = "YOU LOSE. TRY AGAIN..";
+        buttons.forEach((button) => {
+            button.disabled = true;
+        });
         return;
     }
 }  
