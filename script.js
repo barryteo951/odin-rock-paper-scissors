@@ -70,8 +70,8 @@ function playGame() {
         divComputerScore.textContent = computerScore;
 
         checkWinner(humanScore, computerScore);
-        }
     }
+}
 
 
 function checkWinner(humanScore, computerScore) {
